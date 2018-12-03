@@ -1,4 +1,3 @@
-drop database cruddao;
 create database cruddao;
 use cruddao;
 create table Item
@@ -65,7 +64,6 @@ begin
 end $$
 DELIMITER ;
 
-drop table Relacao_Item_Indicador;
 create table Relacao_Item_Indicador
 (
 Id_Relacao_Item_Indicador int AUTO_INCREMENT,
@@ -90,7 +88,6 @@ end $$
 DELIMITER ;
 
 DELIMITER $$
-drop procedure inserir_Relacao_Item_Indicador;
 CREATE PROCEDURE inserir_Relacao_Item_Indicador(nome varchar(50),cod1 int, cod2 int, descricao varchar(200), observacao varchar(200))
 begin 
 	insert into Relacao_Item_Indicador value(default,nome,cod1,cod2,
